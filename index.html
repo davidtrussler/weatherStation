@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Weather Station Test</title>
+		<script type="text/javascript" src="js/views/cities.js"></script>
+		<script type="text/javascript" src="js/views/city.js"></script>
+		<script type="text/javascript" src="js/models/cities.js"></script>
+		<script type="text/javascript" src="js/models/ajax.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+
+	<body>
+		<header>
+			<h1>Weather Station App</h1>
+		</header>
+
+		<main>
+			<h2>How to use this app</h2>
+
+			<p>Explanation for user</p>
+
+			<form name="sort">
+				<label>Sort cities</label>
+
+				<select name="sort">
+					<option value="null">Select</option>
+					<option value="temp_asc">Temperature Ascending</option>
+					<option value="temp_desc">Temperature Descending</option>
+				</select>
+			</form>
+
+			<ul id="locations"></ul>
+		</main>
+	</body>
+</html>

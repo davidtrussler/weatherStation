@@ -1,0 +1,45 @@
+Weather Station App
+
+Instructions
+
+This test is to create a simple application that can pull data from a web service and display it to the user, it should take no more than a couple of hours. 
+
+API
+Using the Open Weather Map API (http://www.openweathermap.org/API) you can fetch data for cities around the world. Everything you need to know about how to call the service and what the data means is on that site. (API Key: feba8c4d24e095aa1ac915580a1b1c40)
+
+The problem
+Create a simple application that can show the user a selection of UK cities (London, Luton, Manchester and Birmingham). Allow the user to select a city, show the weather information for that city (using the API).
+
+You must display:
+Name of the city
+Location (longitude and latitude)
+The current weather conditions
+Icon for the weather conditions
+The temperate and temperature range
+The current atmospheric pressure
+The current humidity
+
+Implement the following features:
+Ability to sort the cities by temperature in ascending & descending order
+Ability to select any city and display the details as described above
+Once the data has been displayed the user should be able to pick another city if they choose.
+
+Design considerations
+Application of OO design best practises
+Demonstrate separation of concerns
+Well refactored code
+Code should be performant if scaled
+
+=====
+
+Notes
+
+1) Create an HTML framework. When the page is loaded the cities from which data can be viewed (London, Luton, Manchester and Birmingham) are displayed, together with an explanation to the user of how to proceed. These should be dynamically loaded so that they could potentially be changed in future.
+
+2) Set up event listener for cities in list to display that city's weather when requested by user. Display the data in a new section appended to the city name so that all other cities are still visible and can be selected without the user needing to return to the home screen. 
+
+3) The display section will expand to deisplay the data. A second click on the city name will close the section, otherwisse it will remain open. An alternative would be to close other sections whnen one is activated. All of this is CSS driven. The data as to whether to open or close the section will come from a DOM query - not necessarily the best wy to do it, but acceptable in this instance.
+
+4) Set up event listener for the sort functionality. This will need to make a fresh API call each time it is activated so that the data is fresh, particularly if we are dealing with values such as the current temperature. Also there needs to be a separate API call for each of the cities - maybe that suggests the call should be made at the start and the data held for when it is needed.
+
+5) TODO: Put loading feedback to the user when an ajax request is in progress.
